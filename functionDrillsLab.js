@@ -6,6 +6,11 @@
 
 //CODE HERE
 
+function helloWorld() {
+  console.log("Hello World");
+}
+
+helloWorld;
 
 ////////////////// PROBLEM 2 ////////////////////
 /*
@@ -50,6 +55,18 @@
 */
 
 //CODE HERE
+function nameCheck(name){
+  if (name === "Steven"){
+    console.log("What is up, Steven?");
+  } else if (name === "Bryan"){
+    console.log("Hey Bryan")
+  } else {
+    console.log(`Cool name, ${name}`);
+  }
+  
+}
+
+let nameGreeting = nameCheck("Stephen");
 
 
 ////////////////// PROBLEM 6 ////////////////////
@@ -63,7 +80,21 @@
 */
 
 //CODE HERE
+function faveColorFinder (color){
+  if (color === 'red'){
+    return "red is a great color";
+  } else if (color === 'green'){
+    return "green is a solid favorite color";
+  } else if (color === 'black'){
+    return "so trendy"
+  } else {
+    return "you need to evaluate your favorite color choice";
+  }
+}
 
+let colorRating = faveColorFinder('green');
+
+console.log(colorRating);
 
 ////////////////// PROBLEM 7 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
@@ -74,7 +105,13 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+function printAllNames (arrayOfNames){
+  for (let i = 0; i < arrayOfNames.length; i++){
+    console.log(arrayOfNames[i]);
+  }
+}
 
+printAllNames(namesArr);
 
 ////////////////// PROBLEM 8 ////////////////////
 /*
@@ -85,6 +122,16 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+function thatsOdd (num){
+  if (num % 2 === 0){
+    return "That's not odd"
+  } else {
+    return "That is odd indeed!";
+  }
+}
+
+let oddChecker = thatsOdd(10);
+console.log(oddChecker);
 
 
 ////////////////// PROBLEM 9 ////////////////////
@@ -99,7 +146,21 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
+function bigOrSmall (arr){
+  let answers = [];
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i] > 100){
+      answers.push('big');
+    }
+    if (arr[i] <= 100){
+      answers.push('small');
+    }
+  }
+  return answers;
+}
 
+let arrayEvaluator = bigOrSmall(bigOrSmallArray);
+console.log(arrayEvaluator);
 
 ////////////////// PROBLEM 10 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
@@ -110,6 +171,17 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
+function theEliminator (contestantsArr, loser){
+  for (let i = 0; i < contestantsArr.length; i++){
+    if (contestantsArr[i] === loser){
+      contestantsArr.splice([i], 1)
+    }
+  }
+  return contestantsArr;
+}
+
+console.log(theEliminator(contestants, loser));
+
 
 
 ////////////////// PROBLEM 11 ////////////////////
@@ -119,7 +191,11 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+function uppercase(stringToUppercase){
+  return stringToUppercase.toUpperCase();
+}
 
+console.log(uppercase(sampleString));
 
 ////////////////// PROBLEM 12 ////////////////////
 /*
@@ -128,7 +204,17 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+function buyChocolateFrogs (amountOfGold){
+  let frogCost = 3;
+  let numOfFrogs;
 
+  numOfFrogs = amountOfGold / frogCost;
+
+  return Math.floor(numOfFrogs);
+  
+}
+
+console.log(buyChocolateFrogs(4));
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -145,7 +231,17 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
-
+function isArrayAcending (numArr){
+  for (let i = 0; i < numArr.length; i++){
+    if (numArr[i] < numArr[i + 1]){
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+let arrayIsAscending = isArrayAcending(sampleArray);
+console.log(arrayIsAscending);
 
 ////////////////// PROBLEM 15 ////////////////////
 
@@ -169,13 +265,14 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ["duck"]
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ["duck", "rubberDuck", "sailorDuck"]
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ["sailorDuck", "duck"]
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ["realDuck", "duck"]
+
