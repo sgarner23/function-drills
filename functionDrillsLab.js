@@ -20,7 +20,11 @@ helloWorld;
 */
 
 //CODE HERE
+function printName(name){
+  console.log(name);
+}
 
+printName("Mia");
 
 ////////////////// PROBLEM 3 ////////////////////
 /*
@@ -33,6 +37,11 @@ helloWorld;
 */
 
 //CODE HERE
+function greeting (name){
+  console.log(`Hello, ${name}`)
+}
+
+greeting("Mia");
 
 
 ////////////////// PROBLEM 4 ////////////////////
@@ -43,7 +52,12 @@ helloWorld;
 */
 
 //CODE HERE
+function add (num1, num2){
+  return num1 + num2;
+}
 
+let sum = add (3, 3);
+console.log(sum);
 
 ////////////////// PROBLEM 5 ////////////////////
 /*
